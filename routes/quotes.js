@@ -22,7 +22,7 @@ router.get("/", function (request, response) {
 
 // Get id that matches the request and return it
 
-router.get(":id", function (request, response) {
+router.get("/:id", function (request, response) {
   const quotesFile = fs.readFileSync("./data/quotes.json");
   const quotesArray = JSON.parse(quotesFile);
   const quotesWithId = quotesArray.find((quote) => {
